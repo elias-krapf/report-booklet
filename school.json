@@ -1,0 +1,37 @@
+{
+  "2022-06-27": {
+    "Deutsch": "Argumentation",
+    "Englisch": "programming languages",
+    "LF-7: IT-Technik": "Raspberry-PI",
+    "LF-8: Anwendungsentwicklung": "SQL-Übungsaufgaben",
+    "LF-9: IT-Systeme": "Authentifizierung",
+    "Politik und Gesellschaft": "Krankenversicherung",
+    "Religionslehre": "Vorträge zu Maschine und Mensch",
+    "Sport": "Volleyball"
+  },
+  "2022-07-18": {
+    "Deutsch": "Schulaufgabe rausbekommen, Wörter zusammensetzen, Gegenteile",
+    "Englisch": "traditions abroad",
+    "LF-6: Betriebswirtschaftliche Prozesse": "Vorträge Kommunikationsmodelle anhören und halten",
+    "LF-7: IT-Technik": "Arduino Feuchtigkeitssensor",
+    "LF-8: Anwendungsentwicklung": "Use-Case-Diagramm",
+    "LF-9: IT-Systeme": "Qos, Voice Over Ip, Kupfer und Glasfaserkabel",
+    "Politik und Gesellschaft": "Krankenversicherung",
+    "Religionslehre": "Philiosophie",
+    "Sport": "Völkerball"
+  },
+  "2022-07-25": {
+    "Deutsch": "Digitalisierung",
+    "LF-7: IT-Technik": "Python einrichtung, Python Grundlagen",
+    "LF-8: Anwendungsentwicklung": "Sequenzdiagramme und Zustandsdiagramme besprechen",
+    "LF-9: IT-Systeme": "VoIP Telefonie am PC einrichten und verwenden, Drucker in der Berufschule anschließen",
+    "Politik und Gesellschaft": "Transhumanismus",
+    "Sport": "Völkerball"
+  },
+  "2022-10-04": {
+    "Deutsch": "Rechtschreibzirkel",
+    "LF-10: Benutzerschnittstellen": "C#, Einführung .NET, Variablen, Datentypen, Arrays, Bedingungen",
+    "LF-11: Funktionalität in Anwendungen": "Klassen in TypeScript",
+    "LF-12: IT-Projekte": "Projektarten, Projektziele, Magisches Dreieck"
+  }
+}
