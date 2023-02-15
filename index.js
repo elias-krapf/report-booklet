@@ -66,7 +66,28 @@ class ReportBooklet {
             new Date("2022-10-06"),
             new Date("2022-10-07"),
         ];
-        let sick = [];
+        let sick = [
+            new Date("2022-10-10"),
+            new Date("2022-11-07"),
+            new Date("2022-12-14"),
+            new Date("2022-12-20"),
+
+
+            new Date("2022-07-26"),
+            new Date("2022-07-21"),
+            new Date("2022-05-12"),
+            new Date("2022-03-21"),
+            new Date("2022-03-22"),
+            new Date("2022-03-23"),
+            new Date("2022-02-03"),
+            new Date("2022-01-26"),
+            new Date("2021-11-22"),
+
+            new Date("2021-07-12"),
+            new Date("2021-05-18"),
+            new Date("2021-05-11"),
+            new Date("2021-05-11"),
+        ];
 
         let entries = ReportBooklet.generateBookletEntries(start, end, sick, school);
         ReportBooklet.buildPdfBook(entries);
@@ -81,6 +102,12 @@ class ReportBooklet {
 
                 for (let holiday of this.getHolidays(date.getFullYear())) {
                     if (this.dateMatch(holiday, date)) {
+                        continue dayLoop;
+                    }
+                }
+
+                for (let sick of sickDays) {
+                    if (this.dateMatch(sick, date)) {
                         continue dayLoop;
                     }
                 }
@@ -109,20 +136,12 @@ class ReportBooklet {
 
                 for (let schoolDay of schoolDays) {
                     if (ReportBooklet.dateMatch(schoolDay, date)) {
-                        console.log("asdf", date.getDate(), date.getMonth() + 1, date.getFullYear())
 
                         weekEntries[date.getFullYear()][kw][humanDay] = {
                             title: `Berufschul Themen in der Woche: ${date.getDate()}.${date.getMonth() + 1}.${date.getFullYear()}`,
                             entries: ReportBooklet.generateSchoolEntry(date),
                         }
 
-                        continue dayLoop;
-                    }
-                }
-
-                for (let sickDay of sickDays) {
-                    if (ReportBooklet.dateMatch(sickDay, date)) {
-                        weekEntries[date.getFullYear()][kw][humanDay]['entries'] = ReportBooklet.generateSickEntry(date);
                         continue dayLoop;
                     }
                 }
@@ -198,6 +217,8 @@ class ReportBooklet {
         doc.setFontSize(18);
         doc.text("Berichtsheft - Elias Krapf\n", 10, 10);
         doc.text("Firma - NosGroup", 10, 20);
+        doc.text("Fachinformatiker Anwendungsentwicklung", 10, 60);
+        doc.text("Fehltage: 31", 10, 70);
 
         let kwValue = 1;
         for (let [year, kws] of Object.entries(entries)) {
