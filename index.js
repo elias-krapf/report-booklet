@@ -215,10 +215,10 @@ class ReportBooklet {
     static buildPdfBook(entries) {
         const doc = new jsPDF({});
         doc.setFontSize(18);
-        doc.text("Berichtsheft - Elias Krapf\n", 10, 10);
-        doc.text("Firma - NosGroup", 10, 20);
-        doc.text("Fachinformatiker Anwendungsentwicklung", 10, 60);
-        doc.text("Fehltage: 31", 10, 70);
+        doc.text("Berichtsheft - <name>\n", 10, 10);
+        doc.text("Firma - <firma>", 10, 20);
+        doc.text("<Ausbildungsname z.B. Fachinformatiker>", 10, 60);
+        doc.text("Fehltage: <Anzahl>", 10, 70);
 
         let kwValue = 1;
         for (let [year, kws] of Object.entries(entries)) {
